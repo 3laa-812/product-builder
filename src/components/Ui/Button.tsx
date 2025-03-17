@@ -3,12 +3,13 @@ import { ReactNode } from "react";
 interface IProps{
     children: ReactNode,
     className?: string,
+    width?: 'w-full' | 'w-fit', 
 }
 
 
-const Button = ({children ,className}:IProps) => {
+const Button = ({children , width = "w-full",className, ...rest}:IProps) => {
   return (
-    <button className={`${className} w-full rounded-md text-white p-2`}>{children}</button>
+    <button className={`${className} ${width} w-full rounded-md text-white p-2`} {...rest}>{children}</button>
   )
 }
 
