@@ -4,13 +4,13 @@ export interface IProduct {
     description: string;
     price: number;
     category: string;
-    imgURL: string;
+    imageUrl: string;
     colors: string[];
   };
 
   export interface IFormInput{
     id: string,
-    name: string,
+    name: 'title' | 'description' | 'imageUrl' | 'price',
     label: string,
     type: string
   }
