@@ -41,12 +41,13 @@ function App() {
         {renderProductList}
       </div>
       <Model isOpen={isOpen} close={close} title='ADD NEW PRODUCT'>
-        <div className='space-y-4'>{renderFormInput}
+        <form className='space-y-4'>
+          {renderFormInput}
           <div className='flex items-center space-x-4'>
             <Button className="bg-indigo-600 hover:bg-indigo-800">Cancel</Button>
             <Button className="bg-gray-600 hover:bg-gray-800">Delete</Button>
           </div>
-        </div>
+        </form>
       </Model>
     </main>
   )
