@@ -2,8 +2,9 @@
 import './App.css'
 import ProductCard from './components/ProductCard';
 import Button from './components/Ui/Button';
+import Input from './components/Ui/Input';
 import Model from './components/Ui/Model';
-import { productList } from './data/data';
+import { formInputList, productList } from './data/data';
 import { useState } from 'react';
 
 function App() {
@@ -24,7 +25,14 @@ function App() {
   const renderProductList = productList.map((product) => {
     return ( <ProductCard key={product.id} product={product}/> );
   })
-
+  const renderFormInput = formInputList.map((input) => {
+    return(
+      <div className='flex flex-col'>
+        <label className='text-white font-medium ' htmlFor={input.id}>{input.label}</label>
+        <Input type='text' id={input.id} name={input.name}/>
+      </div>
+    )
+  })
 
   return (
     <main className='container mx-auto'>
@@ -33,9 +41,11 @@ function App() {
         {renderProductList}
       </div>
       <Model isOpen={isOpen} close={close} title='ADD NEW PRODUCT'>
-        <div className='flex items-center space-x-4'>
-          <Button className="bg-indigo-600 hover:bg-indigo-800">Cancel</Button>
-          <Button className="bg-gray-600 hover:bg-gray-800">Delete</Button>
+        <div className='space-y-4'>{renderFormInput}
+          <div className='flex items-center space-x-4'>
+            <Button className="bg-indigo-600 hover:bg-indigo-800">Cancel</Button>
+            <Button className="bg-gray-600 hover:bg-gray-800">Delete</Button>
+          </div>
         </div>
       </Model>
     </main>

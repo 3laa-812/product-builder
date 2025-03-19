@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-import { IProduct } from "../interfaces/index";
+import { IFormInput, IProduct } from "../interfaces/index";
 
 export const productList: IProduct[] = [
     {
@@ -120,5 +120,32 @@ export const productList: IProduct[] = [
       "imgURL": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
       "colors" : ["#FF0000", "#00FF00", "#A006FF"],
 
+    },
+  ];
+
+  export const formInputList: IFormInput[] = [
+    {
+      id: "title",
+      name: "title",
+      label: "Product Title",
+      type: "text",
+    },
+    {
+      id: "desription",
+      name: "desription",
+      label: "Product desription",
+      type: "text",
+    },
+    {
+      id: "image",
+      name: "imageUrl",
+      label: "Product Image Url",
+      type: "text",
+    },
+    {
+      id: "title",
+      name: "title",
+      label: "Product Title",
+      type: "text",
     },
   ]
