@@ -149,3 +149,7 @@ export const productList: IProduct[] = [
       type: "text",
     },
   ]
+
+  export const colors = [
+    "#A31ACB", "#3C2A21", "#1F8A70", "#820000", "#FF0032", "#FF0000", "#00FF00", "#A006FF",
+  ]
