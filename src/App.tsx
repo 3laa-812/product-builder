@@ -8,6 +8,7 @@ import { formInputList, productList } from './data/data';
 import { ChangeEvent, FormEvent, useState } from 'react';
 import { IProduct } from './interfaces';
 import { productValidation } from './validation';
+import ErrorMsg from './components/ErrorMsg';
 
 function App() {
 
@@ -17,19 +18,21 @@ function App() {
     category: '',
     colors: [],
     imageUrl: '',
-    price: 0,
+    price: "",
   }
 
   // * States
     const [ product , setProduct] = useState<IProduct>(defaultProductObj);
     const [isOpen, setIsOpen] = useState(false);
+    const [errorMsg, setErrorMsg] = useState({title: "", description: "", price: "", imageUrl: ""});
   
   // * Handlers
     const modelOn = () =>  setIsOpen(true);
     const close = () =>  setIsOpen(false);
     const onChangeHabdler = (event: ChangeEvent<HTMLInputElement>) => {
       const {name, value} = event.target;
-      setProduct({...product, [name]: value})
+      setProduct({...product, [name]: value});
+      setErrorMsg({...errorMsg, [name]: ""});
     }
 
     const onCancel = (): void => {
@@ -37,10 +40,21 @@ function App() {
       setProduct(defaultProductObj);
       close();
     }
+
     const submitHandler = (event: FormEvent<HTMLFormElement>): void => {
       event.preventDefault();
-      const errors = productValidation({title: product.title, description: product.description, price: product.price , imageUrl: product.imageUrl});
-      console.log(errors);
+      const errors = productValidation({title: product.title, description: product.description, category: product.category , price: product.price , imageUrl: product.imageUrl});
+
+      // ^ check if any property has a value of "" && check if all properties has a valid value of ""
+      const hasErrorMsg = Object.values(errors).some(value => value == "") && Object.values(product).every(value => value == "");
+      
+      if(!hasErrorMsg) {
+
+        setErrorMsg(errors);
+        return;
+      }
+      
+      console.log("SEND THIS PRODUCT TO OUR SERVER");
     }
 
   // * Renders
@@ -50,8 +64,9 @@ function App() {
   const renderFormInput = formInputList.map((input) => {
     return(
       <div className='flex flex-col' key={input.id}>
-        <label className='text-white font-medium ' htmlFor={input.id}>{input.label}</label>
+        <label className='text-gary-700 font-medium ' htmlFor={input.id}>{input.label}</label>
         <Input type='text' id={input.id} name={input.name} value={product[input.name]} onChange={onChangeHabdler}/>
+        <ErrorMsg msg={errorMsg[input.name]}/>
       </div>
     )
   })
