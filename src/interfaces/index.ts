@@ -14,3 +14,9 @@ export interface IProduct {
     label: string,
     type: string
   }
+
+export interface ICategory {
+    id: string;
+    name: string;
+    imageUrl: string;
+  };

@@ -1,125 +1,61 @@
 import { v4 as uuid } from "uuid";
-import { IFormInput, IProduct } from "../interfaces/index";
+import { ICategory, IFormInput, IProduct } from "../interfaces/index";
 
 export const productList: IProduct[] = [
     {
       "id": uuid(),
-      "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-      "price": "109.95",
-      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-      "category": "men's clothing",
-      "imageUrl": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-      "colors" : ["#FF0000", "#00FF00", "#A006FF"],
-    },
-    {
-      "id": uuid(),
-      "title": "Mens Casual Premium Slim Fit T-Shirts ",
-      "price": "22.3",
-      "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
-      "category": "men's clothing",
-      "imageUrl": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+      "title": "Essence Mascara Lash Princess",
+      "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+      "category": "beauty",
+      "price": "9.99", 
+      "imageUrl":"https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png",
       "colors" : ["#FF0000", "#00FF00", "#A006FF"],
 
     },
     {
       "id": uuid(),
-      "title": "Mens Cotton Jacket",
-      "price": "55.99",
-      "description": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
-      "category": "men's clothing",
-      "imageUrl": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+      "title": "Eyeshadow Palette with Mirror",
+      "description": "The Eyeshadow Palette with Mirror offers a versatile range of eyeshadow shades for creating stunning eye looks. With a built-in mirror, it's convenient for on-the-go makeup application.",
+      "category": "beauty",
+      "price": "19.99",
+      "imageUrl":"https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png",
       "colors" : ["#FF0000", "#00FF00", "#A006FF"],
-
     },
     {
       "id": uuid(),
-      "title": "Mens Casual Slim Fit",
-      "price": "15.99",
-      "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
-      "category": "men's clothing",
-      "imageUrl": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
-      "colors" : ["#FF0000", "#00FF00", "#A006FF"],
-
+      "title": "Powder Canister",
+      "description": "The Powder Canister is a finely milled setting powder designed to set makeup and control shine. With a lightweight and translucent formula, it provides a smooth and matte finish.",
+      "category": "beauty",
+      "price": "14.99",
+      "imageUrl":"https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/1.png",
+      "colors" : ["#FF0000", "#00FF00", "#A006FF"]
     },
     {
       "id": uuid(),
-      "title": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
-      "price": "695",
-      "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
-      "category": "jewelery",
-      "imageUrl": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
-      "colors" : ["#FF0000", "#00FF00", "#A006FF"],
-
+      "title": "Red Lipstick",
+      "description": "The Red Lipstick is a classic and bold choice for adding a pop of color to your lips. With a creamy and pigmented formula, it provides a vibrant and long-lasting finish.",
+      "category": "beauty",
+      "price": "12.99",
+      "imageUrl":"https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/1.png",
+      "colors" : ["#FF0000", "#00FF00", "#A006FF"]
     },
     {
       "id": uuid(),
-      "title": "Solid Gold Petite Micropave ",
-      "price": "168",
-      "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
-      "category": "jewelery",
-      "imageUrl": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
-      "colors" : ["#FF0000", "#00FF00", "#A006FF"],
-
+      "title": "Red Nail Polish",
+      "description": "The Red Nail Polish offers a rich and glossy red hue for vibrant and polished nails. With a quick-drying formula, it provides a salon-quality finish at home.",
+      "category": "beauty",
+      "price": "8.99",
+      "imageUrl":"https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/1.png",
+      "colors" : ["#FF0000", "#00FF00", "#A006FF"]
     },
     {
       "id": uuid(),
-      "title": "White Gold Plated Princess",
-      "price": "9.99",
-      "description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
-      "category": "jewelery",
-      "imageUrl": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
-      "colors" : ["#FF0000", "#00FF00", "#A006FF"],
-
-    },
-    {
-      "id": uuid(),
-      "title": "Pierced Owl Rose Gold Plated Stainless Steel Double",
-      "price": "10.99",
-      "description": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
-      "category": "jewelery",
-      "imageUrl": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
-      "colors" : ["#FF0000", "#00FF00", "#A006FF"],
-
-    },
-    {
-      "id": uuid(),
-      "title": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
-      "price": "64",
-      "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
-      "category": "electronics",
-      "imageUrl": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
-      "colors" : ["#FF0000", "#00FF00", "#A006FF"],
-
-    },
-    {
-      "id": uuid(),
-      "title": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
-      "price": "109",
-      "description": "Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)",
-      "category": "electronics",
-      "imageUrl": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
-      "colors" : ["#FF0000", "#00FF00", "#A006FF"],
-
-    },
-    {
-      "id": uuid(),
-      "title": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
-      "price": "109",
-      "description": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
-      "category": "electronics",
-      "imageUrl": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
-      "colors" : ["#FF0000", "#00FF00", "#A006FF"],
-
-    },
-    {
-      "id": uuid(),
-      "title": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
-      "price": "114",
-      "description": "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty",
-      "category": "electronics",
-      "imageUrl": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
-      "colors" : ["#FF0000", "#00FF00", "#A006FF"],
-
+      "title": "Calvin Klein CK One",
+      "description": "CK One by Calvin Klein is a classic unisex fragrance, known for its fresh and clean scent. It's a versatile fragrance suitable for everyday wear.",
+      "category": "fragrances",
+      "price": "49.99",
+      "imageUrl":"https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/3.png",
+      "colors" : ["#FF0000", "#00FF00", "#A006FF"]
     },
   ];
 
@@ -152,4 +88,47 @@ export const productList: IProduct[] = [
 
   export const colors = [
     "#A31ACB", "#3C2A21", "#1F8A70", "#820000", "#FF0032", "#FF0000", "#00FF00", "#A006FF",
+  ]
+
+  export const categories: ICategory[] = [
+    {
+      id: uuid(),
+      name: "Fragrances",
+      imageUrl: "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/thumbnail.png"
+    },
+    {
+      id: uuid(),
+      name: "Furniture",
+      imageUrl: "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/thumbnail.png"
+    },
+    {
+      id: uuid(),
+      name: "Groceries",
+      imageUrl: "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/thumbnail.png"
+    },
+    {
+      id: uuid(),
+      name: "Home Decoration",
+      imageUrl: "https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/3.png"
+    },
+    {
+      id: uuid(),
+      name: "Kitchen Accessories",
+      imageUrl: "https://cdn.dummyjson.com/products/images/fragrances/Dior%20J'adore/1.png"
+    },
+    {
+      id: uuid(),
+      name: "Laptops",
+      imageUrl: "https://cdn.dummyjson.com/products/images/fragrances/Dolce%20Shine%20Eau%20de/2.png"
+    },
+    {
+      id: uuid(),
+      name: "Mens Shirts",
+      imageUrl: "https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/3.png"
+    },
+    {
+      id: uuid(),
+      name: "Mens Shoes",
+      imageUrl: "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Bed/3.png"
+    },
   ]
