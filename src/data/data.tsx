@@ -93,6 +93,11 @@ export const productList: IProduct[] = [
   export const categories: ICategory[] = [
     {
       id: uuid(),
+      name: "Beauty",
+      imageUrl: "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png"
+    },
+    {
+      id: uuid(),
       name: "Fragrances",
       imageUrl: "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/thumbnail.png"
     },
