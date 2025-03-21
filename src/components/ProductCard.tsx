@@ -1,22 +1,24 @@
-import { categories, colors } from "../data/data";
+import { categories } from "../data/data";
 import { IProduct } from "../interfaces";
 import { textSlicer } from "../utils/Functions";
 import CircleColor from "./CircleColor";
 import Image from "./Image";
 import Button from "./Ui/Button";
 interface IProps{
-  product: IProduct,
-  setProductToEdit: (product: IProduct) => void,
-  openEditModel: () => void
+  product: IProduct;
+  setProductToEdit: (product: IProduct) => void;
+  idx: number;
+  setProductToEditIdx: (idx: number) => void;
+  openEditModel: () => void;
 }
 
 
-const ProductCard = ({product , setProductToEdit , openEditModel}:IProps) => {
+const ProductCard = ({product , setProductToEdit , openEditModel , idx , setProductToEditIdx}:IProps) => {
 
   // ^ Renders
 
 
-  const renderProductColors = colors.map((color) => {
+  const renderProductColors = product.colors.map((color) => {
     return(
       <CircleColor color={color} key={color}/>
     );
@@ -24,13 +26,13 @@ const ProductCard = ({product , setProductToEdit , openEditModel}:IProps) => {
 
   // ^ Handlers
   const onEdit = () => {
+    setProductToEditIdx(idx);
     setProductToEdit(product);
     openEditModel();
   }
 
   return (
-    <div className="border m-x-auto max-w-sm md:max-w-lg md:mx-0 rounded-md p-3 flex flex-col m-4">
-        <img  alt="" />
+    <div className="border mx-auto max-w-sm md:max-w-lg md:mx-0 rounded-md p-3 flex flex-col m-4">
         <Image imgUrl={product.imageUrl} alt={"product"} className="rounded-md mb-2"/>
         <h3 className="font-bold text-2xl my-2">{product.title}</h3>
         <p className="text-gray-700">{textSlicer(product.description)}</p>
@@ -39,7 +41,7 @@ const ProductCard = ({product , setProductToEdit , openEditModel}:IProps) => {
         </div>
         <div className="flex items-center justify-between">
           <span>${product.price}</span>
-          <Image imgUrl={categories.find((category) => category.name === product.category)?.imageUrl} className="w-12 h-12 rounded-full " alt="product"/>
+          <Image imgUrl={categories.find((category) => category.name === product.category)?.imageUrl || product.imageUrl} className="w-12 h-12 rounded-full " alt="product"/>
         </div>
         <div className="flex items-center justify-between gap-2 my-2">
           <Button className="bg-indigo-700" width="w-full" onClick={onEdit}>Edit</Button>
